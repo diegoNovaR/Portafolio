@@ -2,24 +2,69 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    var proyectos = Model.ToList(); // Para evitar múltiples enumeraciones
 }
 
 @model IEnumerable<ProyectoDTO>
 
 @if(Model is not null)
 {
-    <div class="container align-items-center">
-        <h1>Mis Proyectos Personales</h1>
-        <p>aqui puedes ver mis proyectos personales mas recientes</p>
+    <div class="container align-items-center text-center">
+        <h1 class="titulo">Mis Proyectos Personales</h1>
+        <p style="color: cornflowerblue; font-size:1.2rem;">aqui puedes ver mis proyectos personales mas recientes</p>
     </div>
-    @foreach(var p in Model)
-    {
-        <div class="col">
-            <div class="card h-100">
-                <img src="@p.ImagenURL" class="card-img-top" alter="imagen Proyecto"/>
+
+    <div class="container mb-5 align-content-center">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                @for (int i = 0; i < proyectos.Count; i++)
+                {
+                    <button type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide-to="@i"
+                            class="@(i == 0 ? "active" : "")"
+                            aria-current="@(i == 0 ? "true" : null)"
+                            aria-label="Slide @(i + 1)">
+                    </button>
+                }
             </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner m-1">
+                @for (int i = 0; i < proyectos.Count; i++)
+                {
+                    var p = proyectos[i];
+                    <div class="carousel-item @(i == 0 ? "active" : "") my-5 ">
+                        <div class="card mx-auto mb-1 w-50 p-3 border-secondary border-2" style="background-color:cornflowerblue;">
+                            <h2 class="titulo2 mb-3 cardte m-auto">@p.Titulo</h2>
+                            <img src="@p.ImagenURL" class="card-img-top w-50 p-3 m-auto" alt="Imagen Proyecto" />
+
+                            <div class="card-footer text-center">
+
+                                <p>@p.DescripcionCorta</p>
+                                <a class="bi bi-github btn" href="@p.UrlGit" target="_blank" rel="noopener noreferrer "></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev " type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-    }
+    </div>
+
+    
 }
 
 

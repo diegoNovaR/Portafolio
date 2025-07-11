@@ -11,6 +11,11 @@ body, html {
     color: floralwhite;
 }
 
+.titulo2 {
+    font-size: 2rem;
+    color: floralwhite;
+}
+
 .contenedor {
     width: 100%;
     background-color: cornflowerblue;
