@@ -58,3 +58,18 @@ body, html {
     border: 1px solid black;
 }
 
+.custom-card {
+    width: 50%; /* o usa 75%, 50% según el gusto */
+    background-color: cornflowerblue;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: white;
+}
+
+.custom-img {
+    width: 50%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+

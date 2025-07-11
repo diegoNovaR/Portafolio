@@ -32,7 +32,7 @@
             </div>
 
             <!-- Slides -->
-            <div class="carousel-inner m-1">
+            <div class="carousel-inner m-1" style="padding:1em;">
                 @for (int i = 0; i < proyectos.Count; i++)
                 {
                     var p = proyectos[i];
@@ -44,8 +44,11 @@
                             </div>
 
                             <div class="card-body text-center">
-                                <img src="@p.ImagenURL" class="card-img-top w-50 m-auto" alt="Imagen Proyecto" />
-                                <p class="card-text ">@p.DescripcionCorta</p>
+                                <div class="card-img">
+                                    <img src="@p.ImagenURL" class="d-block w-75 m-auto" alt="Imagen Proyecto" />
+                                </div>
+                                
+                                <p class="card-text">@p.DescripcionCorta</p>
                             </div>
 
                             <div class="card-footer text-center">
