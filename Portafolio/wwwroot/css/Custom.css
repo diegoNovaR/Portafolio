@@ -6,8 +6,6 @@ body, html {
     background-color: black;
 }
 
-
-
 .titulo {
     font-size: 3rem;
     color: floralwhite;
@@ -22,7 +20,7 @@ body, html {
 }
 
 .contenedor p{
-    font-size:1.5rem;
+    font-size:1.2rem;
     text-align:left;
 }
 
@@ -39,11 +37,9 @@ body, html {
     border: 1px solid white;
 }
 
-
 .boton:active{
     color:white;
 }
-
 
 .contenedor-botones a:nth-of-type(2) {
     color: floralwhite;
