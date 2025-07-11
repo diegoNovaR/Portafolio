@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<ProyectoDTO>
+
+@if(Model is not null)
+{
+    <div class="container align-items-center">
+        <h1>Mis Proyectos Personales</h1>
+        <p>aqui puedes ver mis proyectos personales mas recientes</p>
+    </div>
+    @foreach(var p in Model)
+    {
+        <div class="col">
+            <div class="card h-100">
+                <img src="@p.ImagenURL" class="card-img-top" alter="imagen Proyecto"/>
+            </div>
+        </div>
+    }
+}
+
+
