@@ -1,0 +1,59 @@
+﻿
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+}
+
+
+
+.titulo {
+    font-size: 3rem;
+    color: floralwhite;
+}
+
+.contenedor {
+    width: 100%;
+    background-color: cornflowerblue;
+    color: floralwhite;
+    padding: 50px;
+    margin: 0;
+}
+
+.contenedor p{
+    font-size:1.5rem;
+    text-align:left;
+}
+
+.boton {
+    border-radius: 70px;
+    padding: 12px 28px;
+    background-color: cornflowerblue;
+    text-decoration:none;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color:floralwhite;
+    border: 1px solid white;
+}
+
+
+.boton:active{
+    color:white;
+}
+
+
+.contenedor-botones a:nth-of-type(2) {
+    color: floralwhite;
+    background-color: transparent;
+    border: 1px solid white;
+}
+    
+.contenedor-botones a:nth-of-type(2):hover {
+    background-color: cornflowerblue;
+    color: black;
+    border: 1px solid black;
+}
+
