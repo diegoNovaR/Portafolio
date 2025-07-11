@@ -39,23 +39,28 @@
                     <div class="carousel-item @(i == 0 ? "active" : "") my-5 ">
                         <div class="card mx-auto mb-1 w-50 border-secondary border-2" style="background-color:cornflowerblue;">
                             
-                            <div class="card-header text-center">
+                            <div class="card-header text-center mb-2">
                                 <h2 class="titulo2 mb-3 cardte m-auto">@p.Titulo</h2>
                             </div>
 
-                            <div class="card-body text-center">
-                                <div class="card-img">
-                                    <img src="@p.ImagenURL" class="d-block w-75 m-auto" alt="Imagen Proyecto" />
+                            <div class="card-body text-center px-0 p-0">
+                                <div class="card-img mb-3">
+                                    <img src="@p.ImagenURL" class="d-block m-auto card-img" alt="Imagen Proyecto" />
                                 </div>
                                 
-                                <p class="card-text">@p.DescripcionCorta</p>
+                                <p class="card-text m-0 p-2">@p.DescripcionCorta</p>
+                                <a class="bi bi-github btn m-0" href="@p.UrlGit" target="_blank" rel="noopener noreferrer "></a>
                             </div>
 
-                            <div class="card-footer text-center">
+                            <div class="card-footer row px-5">
+                                <div class=" col">
+                                    <a class="btn btn-secondary w-50">Ir a Proyecto</a>
+                                    
+                                </div>
+                                <div class="col text-end p-1">
+                                    <a class="btn btn-secondary w-50">Ver Proyectos</a>
 
-                                
-                                <a class="bi bi-github btn" href="@p.UrlGit" target="_blank" rel="noopener noreferrer "></a>
-                                
+                                </div>
                             </div>
                         </div>
                     </div>
