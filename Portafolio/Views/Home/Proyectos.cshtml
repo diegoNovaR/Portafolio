@@ -9,15 +9,21 @@
         @foreach (var i in Model)
         {
 
-            <div class="col-sm-6 mb-2">
-                <div class="card m-4">
-                <img class="card-img-top" src="@i.ImagenURL" alt="Card image cap">
+            <div class="col-sm-6 m-xl-auto">
+            <div class="card mx-auto mb-5 mt-2 w-75" style="background-color:cornflowerblue;">
+                <img class="card-img-top" src="@i.ImagenURL" alt="imgen de proyecto">
                     <div class="card-body">
                         <h5 class="card-title text-center">@i.Titulo</h5>
                         <p class="card-text text-start">@i.Descripcion</p>
                     </div>
-                </div>
+                <ul class="list-group list-group-flush bg-transparent" style="background-color: cornflowerblue;">
+                    <li class="list-group-item p-2 bg-transparent border-0"> <h5 class="card-text text-start m-2">Tecnologias:</h5> <p class="card-text text-start m-2">@i.Tecnologias</p> </li>
+                    <li class="list-group-item p-2 bg-transparent border-0"> <h5 class="card-text text-start m-2">Repositorio:</h5> <a class="bi bi-github btn"> Git hub</a> </li>
+                </ul>
+             </div>
+
             </div>
+            
         }
        
     
