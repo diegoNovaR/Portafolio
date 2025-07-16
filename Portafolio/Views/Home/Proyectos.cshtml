@@ -1,26 +1,25 @@
-﻿@model HomeIndexViewModel
-
+﻿@model IEnumerable<ProyectoDTO>
 @{
-	
+
 }
 
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="row m-4">
+    
+
+        @foreach (var i in Model)
+        {
+
+            <div class="col-sm-6 mb-2">
+                <div class="card m-4">
+                <img class="card-img-top" src="@i.ImagenURL" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@i.Titulo</h5>
+                        <p class="card-text text-start">@i.Descripcion</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
+        }
+       
+    
+
 </div>
